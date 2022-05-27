@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Level 0 Project by Sam Wright</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Level 0 Project by Sam Wright">
+    <meta name="author" content="Samuel Wright">
+
+    <link rel="stylesheet" href="styles.css">
+
+    
+  </head>
+  <body>
+    <div id="root">
+        <h1 id="page-title">Number Generator</h1>
+        <div id="container">
+            <div class="row-container" id="list-container">
+                <div id="generated-list"></div>
+            </div>
+            
+            <div class="row-container">
+                <span class="title">
+                Max number: 
+                    <span id="max-text"></span>
+                </span>
+                <input id="max-input" />
+            </div>
+            <div class="row-container">
+                <span class="title">
+                    Amount: 
+                    <span id="count-text"></span>
+                </span>
+                <input id="count-input"/>
+            </div>
+        </div>
+        
+        <button id="go-btn" 
+            onclick="generateList(obj.count, obj.maxNum)"
+        >
+            Go
+        </button>
+
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+</html>
