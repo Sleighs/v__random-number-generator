@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Level 0 Project by Sam Wright</title>
+    <title>Random Number Generator</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Level 0 Project by Sam Wright">
+    <meta name="description" content="V School Project by Sam Wright">
     <meta name="author" content="Samuel Wright">
 
     <link rel="stylesheet" href="styles.css">
-
-    
   </head>
   <body>
     <div id="root">
         <h1 id="page-title">Number Generator</h1>
         <div id="container">
-            <div class="row-container" id="list-container">
+            <div class="row-container">
                 <div id="generated-list"></div>
             </div>
             
@@ -34,11 +32,10 @@
                 </span>
                 <input id="count-input"/>
             </div>
+            <div id="log-text"></div>
         </div>
         
-        <button id="go-btn" 
-            onclick="generateList(obj.count, obj.maxNum)"
-        >
+        <button id="go-btn" onclick="generateList(obj.count, obj.maxNum)">
             Go
         </button>
 

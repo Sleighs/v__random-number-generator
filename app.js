@@ -1,18 +1,55 @@
 // A place to store the count, max number and integer list
 var obj = {
-    count: 3,
+    count: 5,
     maxNum: 100,
     numbers: [],
 }
 
 // Get random number
 function getRandomNum(max){
-    // 
-    return Math.floor((Math.random() * max) + 1);
+    // If max equals 1, retun with 0 as the smallest number else use 1 as smallest number
+    if (max === 1){
+        return Math.floor((Math.random() * 2))
+    } else {
+        return Math.floor((Math.random() * max) + 1)
+    }
 }
 
 // Create and display list of random numbers  
 function generateList(count, max) {
+    // Limit amount between 1 and 10,000 for performance
+
+    // Get element of log to add warning to
+    var logEle = document.getElementById('log-text')
+    // Clear element
+    logEle.innerHTML = ''
+    logEle.style.display = 'none'
+
+    // If amount selected is less than one it logs a warning and stops the function
+    if (count < 1){
+        logEle.style.display = 'block'
+        logEle.innerHTML = 'At least one number must be generated'
+        return
+    }
+    // If amount selected is more than 10,000 it logs a warning and stops the function
+    if (count > 10000){
+        logEle.style.display = 'block'
+        logEle.innerHTML = 'Amount must be less than 10,000'
+        return
+    }
+    //If max is less than 1
+    if (max < 1){
+        logEle.style.display = 'block'
+        logEle.innerHTML = 'Max must be 1 or greater'
+        return
+    }
+    //If max is greater than 100,000,000,000,000,000,000 print warning and stop function
+    if (max > 100000000000000000000){
+        logEle.style.display = 'block'
+        logEle.innerHTML = 'Max must be less than 100,000,000,000,000,000,000'
+        return
+    }
+
     // Create array to store new numbers
     var numArr = []
 
@@ -58,10 +95,10 @@ function startApp(){
 
     // Add and event listener to  update the variables on change
     countEle.addEventListener('change', function(){
-        obj.count = countEle.value
+        obj.count = Number(countEle.value)
     })
     maxNumEle.addEventListener('change', function(){
-        obj.maxNum = maxNumEle.value
+        obj.maxNum = Number(maxNumEle.value)
     }) 
 
     // Get initial random integers
