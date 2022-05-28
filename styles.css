@@ -87,3 +87,29 @@ body {
     font-size: 25px;
     color: rgb(255, 255, 255, .9);
 }
+
+#footer {
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    bottom: 10px;
+    position: absolute;
+    left: 25px; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 150px;
+}
+
+#footer a, 
+#footer p {
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.25);
+    
+}
+#footer a:visited {
+    color: rgba(255, 255, 255, 0.25);
+}
