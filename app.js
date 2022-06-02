@@ -38,13 +38,13 @@ function generateList(count, max) {
     //If max is less than 1 print warning and stop function
     if (max < 1){
         logEle.style.display = 'block'
-        logEle.innerHTML = 'Max must be 1 or greater'
+        logEle.innerHTML = 'Max must be greater than 1 and less than 100,000,000,000,000,000,000'
         return
     }
     //If max is greater than 100,000,000,000,000,000,000 print alert and stop function
     if (max > 100000000000000000000){
         logEle.style.display = 'block'
-        logEle.innerHTML = 'Max must be less than 100,000,000,000,000,000,000'
+        logEle.innerHTML = 'Max must be greater than 1 and less than 100,000,000,000,000,000,000'
         return
     }
 
