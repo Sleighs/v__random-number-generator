@@ -91,7 +91,7 @@ function startApp(){
     countEle.value = obj.count
     maxNumEle.value = obj.maxNum
 
-    // Add and event listener to  update the variables on change
+    // Add event listeners to update variables on change
     countEle.addEventListener('change', function(){
         obj.count = Number(countEle.value)
     })
